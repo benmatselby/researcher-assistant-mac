@@ -4,6 +4,6 @@ A native mac application, written in Swift, that aims to provide some key inform
 
 ## Requirements
 
-- XCode 14.2+
+- Xcode 14.2+
 - Swift 5.7+
 - You will need to update `ProlificAssistant/Client/Client.swift` with your API Token until this is persisted.
