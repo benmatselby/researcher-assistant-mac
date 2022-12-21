@@ -9,20 +9,65 @@ import SwiftUI
 import AppKit
 
 struct StudyView: View {
+    var body: some View {
+        VStack(alignment: .trailing) {
+            // https://developer.apple.com/documentation/swiftui/tabview
+            TabView() {
+                ActiveStudyView(state: StudyStatus.Active)
+                    .badge(2)
+                    .tabItem {
+                        Label("Active studies", systemImage: "tray.and.arrow.down.fill")
+                    }
+
+                ActiveStudyView(state: StudyStatus.Draft)
+                    .badge(2)
+                    .tabItem {
+                        Label("Draft studies", systemImage: "tray.and.arrow.down.fill")
+                    }
+            }
+
+            HStack{
+                Button("Refresh") {
+                    Task {
+                        await getStudies(status: StudyStatus.Draft)
+                    }
+                }.keyboardShortcut("r")
+
+                Button("Quit") {
+                    NSApplication.shared.terminate(self)
+                }.keyboardShortcut("q")
+            }
+        }
+        .frame(width: 400.0).padding(20)
+    }
+
+    /**
+     Get studies from Prolific
+     */
+    func getStudies(status: StudyStatus) async -> [Study] {
+        let now = Date()
+        print("Loading studies..." + now.ISO8601Format())
+        return await Client().getStudies(status: status).results
+    }
+}
+
+struct ActiveStudyView: View {
+
+    var state: StudyStatus
     @State var studies: [Study] = []
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Active studies")
-                .font(.title)
 
-            List {
-                if studies.count == 0 {
+            if studies.count == 0 {
+                VStack(alignment: .center) {
                     Spacer()
                     Text("No active studies")
                     Link("Create study..", destination: URL(string:"https://app.prolific.co")!)
                     Spacer()
-                } else {
+                }
+            } else {
+                List {
                     ForEach(studies, id: \.self) { study in
                         Link(study.name.prefix(50), destination: URL(string: study.getAppURL())!)
                             .padding(.bottom, 10.0).fixedSize()
@@ -30,24 +75,10 @@ struct StudyView: View {
                     }
                 }
             }
-            .padding(-16.0)
-
-            Button("Quit") {
-                NSApplication.shared.terminate(self)
-            }.keyboardShortcut("q")
+        }.task {
+            let now = Date()
+            print("Loading " + state.description + " studies..." + now.ISO8601Format())
+            studies = await Client().getStudies(status: state).results
         }
-        .frame(width: 400.0)
-        .task {
-            await getStudies()
-        }.padding(20)
-    }
-
-    /**
-     Get studies from Prolific
-     */
-    func getStudies() async {
-        let now = Date()
-        print("Loading studies..." + now.ISO8601Format())
-        studies = await Client().getStudies().results
     }
 }

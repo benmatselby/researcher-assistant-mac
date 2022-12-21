@@ -29,3 +29,18 @@ struct Study: Codable, Hashable {
 struct Studies: Codable {
     var results: [Study]
 }
+
+/**
+ Provide some kind of study status mapping
+ */
+enum StudyStatus {
+    case Draft
+    case Active
+
+    var description : String {
+        switch self {
+        case .Draft: return "Draft"
+        case .Active: return "Active"
+        }
+    }
+}

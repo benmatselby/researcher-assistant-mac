@@ -24,12 +24,18 @@ class Client {
     /**
      Responsible for getting studies from the API.
      */
-    func getStudies() async -> Studies {
+    func getStudies(status: StudyStatus) async -> Studies {
         var studies: Studies = Studies(results: [])
 
-        var request = URLRequest(url: URL(string: self.baseURL + "/v1/studies/?draft=1")!)
-            request.httpMethod = "GET"
-            request.setValue(self.apiToken, forHTTPHeaderField: "Authorization")
+        var urlFragment = "active=1"
+
+        if status == .Draft {
+            urlFragment = "draft=1"
+        }
+
+        var request = URLRequest(url: URL(string: self.baseURL + "/v1/studies/?" + urlFragment)!)
+        request.httpMethod = "GET"
+        request.setValue(self.apiToken, forHTTPHeaderField: "Authorization")
 
         let (data, _) = try! await URLSession.shared.data(for: request)
         studies = try! JSONDecoder().decode(Studies.self, from: (data))
