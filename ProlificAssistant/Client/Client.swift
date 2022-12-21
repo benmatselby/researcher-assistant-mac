@@ -25,8 +25,6 @@ class Client {
             return []
         }
 
-        var studies: Studies = Studies(results: [])
-
         var urlFragment = "active=1"
 
         if status == .Draft {
@@ -37,9 +35,9 @@ class Client {
         request.httpMethod = "GET"
         request.setValue("Token " + self.config.getApiToken(), forHTTPHeaderField: "Authorization")
 
-        let (data, _) = try! await URLSession.shared.data(for: request)
-        studies = try! JSONDecoder().decode(Studies.self, from: (data))
+        guard let (data, _) = try? await URLSession.shared.data(for: request) else { return [] }
 
-        return studies.results
+        guard let studies = try? JSONDecoder().decode(Studies.self, from: (data)) else { return [] }
+            return studies.results
     }
 }
