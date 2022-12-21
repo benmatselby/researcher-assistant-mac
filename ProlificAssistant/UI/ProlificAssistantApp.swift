@@ -12,7 +12,7 @@ import AppKit
 struct ProlificAssistantApp: App {
     var body: some Scene {
         MenuBarExtra("Prolific", image: "Logo") {
-            StudyView()
+            MainView()
         }.menuBarExtraStyle(.window)
     }
 }

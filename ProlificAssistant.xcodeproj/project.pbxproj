@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B510A34B2950C788002144E6 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = B510A34A2950C788002144E6 /* Client.swift */; };
+		B5303DBF29536E770068410C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5303DBE29536E770068410C /* SettingsView.swift */; };
+		B5303DC129536F560068410C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5303DC029536F560068410C /* MainView.swift */; };
+		B5303DC3295370480068410C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5303DC2295370480068410C /* Config.swift */; };
+		B5303DC6295381970068410C /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5303DC5295381970068410C /* Keychain.swift */; };
 		B563F270292EB27000038E0C /* ProlificAssistantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563F26F292EB27000038E0C /* ProlificAssistantApp.swift */; };
 		B563F274292EB27100038E0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B563F273292EB27100038E0C /* Assets.xcassets */; };
 		B563F278292EB27100038E0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B563F277292EB27100038E0C /* Preview Assets.xcassets */; };
@@ -37,6 +41,10 @@
 
 /* Begin PBXFileReference section */
 		B510A34A2950C788002144E6 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		B5303DBE29536E770068410C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B5303DC029536F560068410C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B5303DC2295370480068410C /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		B5303DC5295381970068410C /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		B563F26C292EB27000038E0C /* ProlificAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProlificAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B563F26F292EB27000038E0C /* ProlificAssistantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProlificAssistantApp.swift; sourceTree = "<group>"; };
 		B563F273292EB27100038E0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +92,8 @@
 				B563F26F292EB27000038E0C /* ProlificAssistantApp.swift */,
 				B563F273292EB27100038E0C /* Assets.xcassets */,
 				B5CF91F62951CB62002FAF18 /* StudyView.swift */,
+				B5303DBE29536E770068410C /* SettingsView.swift */,
+				B5303DC029536F560068410C /* MainView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -92,8 +102,17 @@
 			isa = PBXGroup;
 			children = (
 				B510A34A2950C788002144E6 /* Client.swift */,
+				B5303DC2295370480068410C /* Config.swift */,
 			);
 			path = Client;
+			sourceTree = "<group>";
+		};
+		B5303DC4295381850068410C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B5303DC5295381970068410C /* Keychain.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		B563F263292EB27000038E0C = {
@@ -121,11 +140,12 @@
 		B563F26E292EB27000038E0C /* ProlificAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				B563F275292EB27100038E0C /* ProlificAssistant.entitlements */,
 				B5FB7F96295113F5000501EA /* Models */,
 				B510A3492950C77A002144E6 /* Client */,
 				B510A3482950C767002144E6 /* UI */,
-				B563F275292EB27100038E0C /* ProlificAssistant.entitlements */,
 				B563F276292EB27100038E0C /* Preview Content */,
+				B5303DC4295381850068410C /* Utils */,
 			);
 			path = ProlificAssistant;
 			sourceTree = "<group>";
@@ -293,8 +313,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5303DBF29536E770068410C /* SettingsView.swift in Sources */,
+				B5303DC129536F560068410C /* MainView.swift in Sources */,
 				B5FB7F9829511401000501EA /* Study.swift in Sources */,
+				B5303DC3295370480068410C /* Config.swift in Sources */,
 				B563F270292EB27000038E0C /* ProlificAssistantApp.swift in Sources */,
+				B5303DC6295381970068410C /* Keychain.swift in Sources */,
 				B5CF91F72951CB62002FAF18 /* StudyView.swift in Sources */,
 				B510A34B2950C788002144E6 /* Client.swift in Sources */,
 			);
