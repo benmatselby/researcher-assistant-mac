@@ -24,7 +24,7 @@ class Client {
     /**
      Responsible for getting studies from the API.
      */
-    func getStudies(status: StudyStatus) async -> Studies {
+    func getStudies(status: StudyStatus) async -> [Study] {
         var studies: Studies = Studies(results: [])
 
         var urlFragment = "active=1"
@@ -39,6 +39,7 @@ class Client {
 
         let (data, _) = try! await URLSession.shared.data(for: request)
         studies = try! JSONDecoder().decode(Studies.self, from: (data))
-        return studies
+
+        return studies.results
     }
 }

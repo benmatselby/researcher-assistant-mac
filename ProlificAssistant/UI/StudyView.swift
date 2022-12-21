@@ -27,27 +27,12 @@ struct StudyView: View {
             }
 
             HStack{
-                Button("Refresh") {
-                    Task {
-                        await getStudies(status: StudyStatus.Draft)
-                    }
-                }.keyboardShortcut("r")
-
                 Button("Quit") {
                     NSApplication.shared.terminate(self)
                 }.keyboardShortcut("q")
             }
         }
         .frame(width: 400.0).padding(20)
-    }
-
-    /**
-     Get studies from Prolific
-     */
-    func getStudies(status: StudyStatus) async -> [Study] {
-        let now = Date()
-        print("Loading studies..." + now.ISO8601Format())
-        return await Client().getStudies(status: status).results
     }
 }
 
@@ -78,7 +63,7 @@ struct ActiveStudyView: View {
         }.task {
             let now = Date()
             print("Loading " + state.description + " studies..." + now.ISO8601Format())
-            studies = await Client().getStudies(status: state).results
+            studies = await Client().getStudies(status: state)
         }
     }
 }
