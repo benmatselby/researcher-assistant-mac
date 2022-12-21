@@ -17,6 +17,15 @@ class ApiConfig {
         self.apiURL = "https://api.prolific.co/api"
     }
 
+    /// Check to see if the API Config is valid
+    /// - Returns: Whether or not the API Config is valid, and therefore clients can make a valid request.
+    func isValid() -> Bool {
+        if self.getApiToken() == "" {
+            return false
+        }
+
+        return true
+    }
 
     /// Setter for the API Token
     ///
