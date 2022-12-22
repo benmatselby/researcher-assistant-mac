@@ -10,14 +10,12 @@
 		B510A34B2950C788002144E6 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = B510A34A2950C788002144E6 /* Client.swift */; };
 		B5303DBF29536E770068410C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5303DBE29536E770068410C /* SettingsView.swift */; };
 		B5303DC129536F560068410C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5303DC029536F560068410C /* MainView.swift */; };
-		B5303DC3295370480068410C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5303DC2295370480068410C /* Config.swift */; };
+		B5303DC3295370480068410C /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5303DC2295370480068410C /* ApiConfig.swift */; };
 		B5303DC6295381970068410C /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5303DC5295381970068410C /* Keychain.swift */; };
 		B563F270292EB27000038E0C /* ProlificAssistantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563F26F292EB27000038E0C /* ProlificAssistantApp.swift */; };
 		B563F274292EB27100038E0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B563F273292EB27100038E0C /* Assets.xcassets */; };
 		B563F278292EB27100038E0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B563F277292EB27100038E0C /* Preview Assets.xcassets */; };
-		B563F282292EB27100038E0C /* ProlificAssistantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563F281292EB27100038E0C /* ProlificAssistantTests.swift */; };
-		B563F28C292EB27100038E0C /* ProlificAssistantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563F28B292EB27100038E0C /* ProlificAssistantUITests.swift */; };
-		B563F28E292EB27100038E0C /* ProlificAssistantUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563F28D292EB27100038E0C /* ProlificAssistantUITestsLaunchTests.swift */; };
+		B563F282292EB27100038E0C /* ApiConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563F281292EB27100038E0C /* ApiConfigTests.swift */; };
 		B5CF91F72951CB62002FAF18 /* StudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF91F62951CB62002FAF18 /* StudyView.swift */; };
 		B5FB7F9829511401000501EA /* Study.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FB7F9729511401000501EA /* Study.swift */; };
 /* End PBXBuildFile section */
@@ -30,20 +28,13 @@
 			remoteGlobalIDString = B563F26B292EB27000038E0C;
 			remoteInfo = ProlificAssistant;
 		};
-		B563F288292EB27100038E0C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B563F264292EB27000038E0C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B563F26B292EB27000038E0C;
-			remoteInfo = ProlificAssistant;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B510A34A2950C788002144E6 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		B5303DBE29536E770068410C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B5303DC029536F560068410C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		B5303DC2295370480068410C /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		B5303DC2295370480068410C /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
 		B5303DC5295381970068410C /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		B563F26C292EB27000038E0C /* ProlificAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProlificAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B563F26F292EB27000038E0C /* ProlificAssistantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProlificAssistantApp.swift; sourceTree = "<group>"; };
@@ -51,10 +42,7 @@
 		B563F275292EB27100038E0C /* ProlificAssistant.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProlificAssistant.entitlements; sourceTree = "<group>"; };
 		B563F277292EB27100038E0C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B563F27D292EB27100038E0C /* ProlificAssistantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProlificAssistantTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B563F281292EB27100038E0C /* ProlificAssistantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProlificAssistantTests.swift; sourceTree = "<group>"; };
-		B563F287292EB27100038E0C /* ProlificAssistantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProlificAssistantUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B563F28B292EB27100038E0C /* ProlificAssistantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProlificAssistantUITests.swift; sourceTree = "<group>"; };
-		B563F28D292EB27100038E0C /* ProlificAssistantUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProlificAssistantUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B563F281292EB27100038E0C /* ApiConfigTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfigTests.swift; sourceTree = "<group>"; };
 		B563F29A292EB2AE00038E0C /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		B563F29B292EB2AE00038E0C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B5CF91F62951CB62002FAF18 /* StudyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyView.swift; sourceTree = "<group>"; };
@@ -70,13 +58,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B563F27A292EB27100038E0C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B563F284292EB27100038E0C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -102,7 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				B510A34A2950C788002144E6 /* Client.swift */,
-				B5303DC2295370480068410C /* Config.swift */,
+				B5303DC2295370480068410C /* ApiConfig.swift */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -119,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				B563F26E292EB27000038E0C /* ProlificAssistant */,
-				B563F28A292EB27100038E0C /* ProlificAssistantUITests */,
 				B563F280292EB27100038E0C /* ProlificAssistantTests */,
 				B563F29A292EB2AE00038E0C /* Makefile */,
 				B563F29B292EB2AE00038E0C /* README.md */,
@@ -132,7 +112,6 @@
 			children = (
 				B563F26C292EB27000038E0C /* ProlificAssistant.app */,
 				B563F27D292EB27100038E0C /* ProlificAssistantTests.xctest */,
-				B563F287292EB27100038E0C /* ProlificAssistantUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,18 +140,17 @@
 		B563F280292EB27100038E0C /* ProlificAssistantTests */ = {
 			isa = PBXGroup;
 			children = (
-				B563F281292EB27100038E0C /* ProlificAssistantTests.swift */,
+				B5E1612929549D23004283DC /* Client */,
 			);
 			path = ProlificAssistantTests;
 			sourceTree = "<group>";
 		};
-		B563F28A292EB27100038E0C /* ProlificAssistantUITests */ = {
+		B5E1612929549D23004283DC /* Client */ = {
 			isa = PBXGroup;
 			children = (
-				B563F28B292EB27100038E0C /* ProlificAssistantUITests.swift */,
-				B563F28D292EB27100038E0C /* ProlificAssistantUITestsLaunchTests.swift */,
+				B563F281292EB27100038E0C /* ApiConfigTests.swift */,
 			);
-			path = ProlificAssistantUITests;
+			path = Client;
 			sourceTree = "<group>";
 		};
 		B5FB7F96295113F5000501EA /* Models */ = {
@@ -221,24 +199,6 @@
 			productReference = B563F27D292EB27100038E0C /* ProlificAssistantTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B563F286292EB27100038E0C /* ProlificAssistantUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B563F297292EB27100038E0C /* Build configuration list for PBXNativeTarget "ProlificAssistantUITests" */;
-			buildPhases = (
-				B563F283292EB27100038E0C /* Sources */,
-				B563F284292EB27100038E0C /* Frameworks */,
-				B563F285292EB27100038E0C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B563F289292EB27100038E0C /* PBXTargetDependency */,
-			);
-			name = ProlificAssistantUITests;
-			productName = ProlificAssistantUITests;
-			productReference = B563F287292EB27100038E0C /* ProlificAssistantUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -253,10 +213,6 @@
 						CreatedOnToolsVersion = 14.1;
 					};
 					B563F27C292EB27100038E0C = {
-						CreatedOnToolsVersion = 14.1;
-						TestTargetID = B563F26B292EB27000038E0C;
-					};
-					B563F286292EB27100038E0C = {
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = B563F26B292EB27000038E0C;
 					};
@@ -277,7 +233,6 @@
 			targets = (
 				B563F26B292EB27000038E0C /* ProlificAssistant */,
 				B563F27C292EB27100038E0C /* ProlificAssistantTests */,
-				B563F286292EB27100038E0C /* ProlificAssistantUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -299,13 +254,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B563F285292EB27100038E0C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -316,7 +264,7 @@
 				B5303DBF29536E770068410C /* SettingsView.swift in Sources */,
 				B5303DC129536F560068410C /* MainView.swift in Sources */,
 				B5FB7F9829511401000501EA /* Study.swift in Sources */,
-				B5303DC3295370480068410C /* Config.swift in Sources */,
+				B5303DC3295370480068410C /* ApiConfig.swift in Sources */,
 				B563F270292EB27000038E0C /* ProlificAssistantApp.swift in Sources */,
 				B5303DC6295381970068410C /* Keychain.swift in Sources */,
 				B5CF91F72951CB62002FAF18 /* StudyView.swift in Sources */,
@@ -328,16 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B563F282292EB27100038E0C /* ProlificAssistantTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B563F283292EB27100038E0C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B563F28C292EB27100038E0C /* ProlificAssistantUITests.swift in Sources */,
-				B563F28E292EB27100038E0C /* ProlificAssistantUITestsLaunchTests.swift in Sources */,
+				B563F282292EB27100038E0C /* ApiConfigTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,11 +287,6 @@
 			isa = PBXTargetDependency;
 			target = B563F26B292EB27000038E0C /* ProlificAssistant */;
 			targetProxy = B563F27E292EB27100038E0C /* PBXContainerItemProxy */;
-		};
-		B563F289292EB27100038E0C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B563F26B292EB27000038E0C /* ProlificAssistant */;
-			targetProxy = B563F288292EB27100038E0C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -475,9 +409,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = ProlificAssistant/ProlificAssistant.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -505,10 +441,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.prolific.ResearcherAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -517,9 +454,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = ProlificAssistant/ProlificAssistant.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -547,10 +486,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.prolific.ResearcherAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -559,6 +499,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -571,10 +512,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.prolific.ResearcherAssistantTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProlificAssistant.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ProlificAssistant";
 			};
 			name = Debug;
@@ -584,6 +526,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -596,59 +539,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.prolific.ResearcherAssistantTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProlificAssistant.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ProlificAssistant";
-			};
-			name = Release;
-		};
-		B563F298292EB27100038E0C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 38J7HFHL7P;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_LSUIElement = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.prolific.ResearcherAssistantUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ProlificAssistant;
-			};
-			name = Debug;
-		};
-		B563F299292EB27100038E0C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 38J7HFHL7P;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_LSUIElement = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.prolific.ResearcherAssistantUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ProlificAssistant;
 			};
 			name = Release;
 		};
@@ -678,15 +574,6 @@
 			buildConfigurations = (
 				B563F295292EB27100038E0C /* Debug */,
 				B563F296292EB27100038E0C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B563F297292EB27100038E0C /* Build configuration list for PBXNativeTarget "ProlificAssistantUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B563F298292EB27100038E0C /* Debug */,
-				B563F299292EB27100038E0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

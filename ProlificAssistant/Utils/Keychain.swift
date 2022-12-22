@@ -24,7 +24,7 @@ class Keychain
             kSecAttrAccount as String : url,
             kSecAttrService as String : Bundle.main.bundleIdentifier ?? "",
             kSecClass as String : kSecClassGenericPassword,
-            kSecAttrAccessible as String : kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly,
+            kSecAttrAccessible as String : kSecAttrAccessibleWhenUnlocked,
             kSecReturnData as String : true,
             kSecMatchLimit as String : kSecMatchLimitOne
             ] as [String : Any]
@@ -55,7 +55,7 @@ class Keychain
             kSecAttrAccount as String : url,
             kSecAttrService as String : identifier,
             kSecClass as String : kSecClassGenericPassword,
-            kSecAttrAccessible as String : kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly
+            kSecAttrAccessible as String : kSecAttrAccessibleWhenUnlocked
             ] as [String : Any]
 
         var status = SecItemCopyMatching(query as CFDictionary, nil)
