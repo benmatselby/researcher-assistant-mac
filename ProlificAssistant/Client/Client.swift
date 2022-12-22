@@ -35,6 +35,7 @@ class Client {
       url: URL(string: self.config.getApiUrl() + "/v1/studies/?" + urlFragment)!)
     request.httpMethod = "GET"
     request.setValue("Token " + self.config.getApiToken(), forHTTPHeaderField: "Authorization")
+    request.setValue("prolific/researcher-assistant-mac", forHTTPHeaderField: "User-Agent")
 
     guard let (data, _) = try? await URLSession.shared.data(for: request) else { return [] }
 
