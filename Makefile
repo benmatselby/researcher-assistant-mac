@@ -10,3 +10,6 @@ explain:
 
 test:
 	xcodebuild test -project ProlificAssistant.xcodeproj -scheme "$(SCHEME)" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -enableCodeCoverage YES
+
+format:
+	swift format --in-place --recursive "$(SCHEME)"
