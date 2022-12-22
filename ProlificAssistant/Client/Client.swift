@@ -28,7 +28,7 @@ class Client {
     var urlFragment = "active=1"
 
     if status == .Draft {
-      urlFragment = "draft=1"
+      urlFragment = "published=0"
     }
 
     var request = URLRequest(
