@@ -44,6 +44,7 @@
 		B563F281292EB27100038E0C /* ApiConfigTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfigTests.swift; sourceTree = "<group>"; };
 		B563F29A292EB2AE00038E0C /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		B563F29B292EB2AE00038E0C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B57514CA2955F1FC002680EC /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		B5CF91F62951CB62002FAF18 /* StudyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyView.swift; sourceTree = "<group>"; };
 		B5FB7F9729511401000501EA /* Study.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +92,7 @@
 		B563F263292EB27000038E0C = {
 			isa = PBXGroup;
 			children = (
+				B57514CA2955F1FC002680EC /* CHANGELOG.md */,
 				B563F26E292EB27000038E0C /* ProlificAssistant */,
 				B563F280292EB27100038E0C /* ProlificAssistantTests */,
 				B563F29A292EB2AE00038E0C /* Makefile */,
