@@ -11,11 +11,11 @@
 		B5303DBF29536E770068410C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5303DBE29536E770068410C /* SettingsView.swift */; };
 		B5303DC129536F560068410C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5303DC029536F560068410C /* MainView.swift */; };
 		B5303DC3295370480068410C /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5303DC2295370480068410C /* ApiConfig.swift */; };
-		B5303DC6295381970068410C /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5303DC5295381970068410C /* Keychain.swift */; };
 		B563F270292EB27000038E0C /* ProlificAssistantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563F26F292EB27000038E0C /* ProlificAssistantApp.swift */; };
 		B563F274292EB27100038E0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B563F273292EB27100038E0C /* Assets.xcassets */; };
 		B563F278292EB27100038E0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B563F277292EB27100038E0C /* Preview Assets.xcassets */; };
 		B563F282292EB27100038E0C /* ApiConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563F281292EB27100038E0C /* ApiConfigTests.swift */; };
+		B57514C92955EAE0002680EC /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = B57514C82955EAE0002680EC /* KeychainAccess */; };
 		B5CF91F72951CB62002FAF18 /* StudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF91F62951CB62002FAF18 /* StudyView.swift */; };
 		B5FB7F9829511401000501EA /* Study.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FB7F9729511401000501EA /* Study.swift */; };
 /* End PBXBuildFile section */
@@ -35,7 +35,6 @@
 		B5303DBE29536E770068410C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B5303DC029536F560068410C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B5303DC2295370480068410C /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
-		B5303DC5295381970068410C /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		B563F26C292EB27000038E0C /* ProlificAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProlificAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B563F26F292EB27000038E0C /* ProlificAssistantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProlificAssistantApp.swift; sourceTree = "<group>"; };
 		B563F273292EB27100038E0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57514C92955EAE0002680EC /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,14 +88,6 @@
 			path = Client;
 			sourceTree = "<group>";
 		};
-		B5303DC4295381850068410C /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				B5303DC5295381970068410C /* Keychain.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		B563F263292EB27000038E0C = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +116,6 @@
 				B510A3492950C77A002144E6 /* Client */,
 				B510A3482950C767002144E6 /* UI */,
 				B563F276292EB27100038E0C /* Preview Content */,
-				B5303DC4295381850068410C /* Utils */,
 			);
 			path = ProlificAssistant;
 			sourceTree = "<group>";
@@ -177,6 +168,9 @@
 			dependencies = (
 			);
 			name = ProlificAssistant;
+			packageProductDependencies = (
+				B57514C82955EAE0002680EC /* KeychainAccess */,
+			);
 			productName = ProlificAssistant;
 			productReference = B563F26C292EB27000038E0C /* ProlificAssistant.app */;
 			productType = "com.apple.product-type.application";
@@ -227,6 +221,9 @@
 				Base,
 			);
 			mainGroup = B563F263292EB27000038E0C;
+			packageReferences = (
+				B57514C72955EAE0002680EC /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = B563F26D292EB27000038E0C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -266,7 +263,6 @@
 				B5FB7F9829511401000501EA /* Study.swift in Sources */,
 				B5303DC3295370480068410C /* ApiConfig.swift in Sources */,
 				B563F270292EB27000038E0C /* ProlificAssistantApp.swift in Sources */,
-				B5303DC6295381970068410C /* Keychain.swift in Sources */,
 				B5CF91F72951CB62002FAF18 /* StudyView.swift in Sources */,
 				B510A34B2950C788002144E6 /* Client.swift in Sources */,
 			);
@@ -579,6 +575,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B57514C72955EAE0002680EC /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B57514C82955EAE0002680EC /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B57514C72955EAE0002680EC /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B563F264292EB27000038E0C /* Project object */;
 }
