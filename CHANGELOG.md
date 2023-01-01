@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.2
+
+- Document that we need a Release version of the binary so it's Universal
+
 ## 0.0.1
 
 - First beta alpha release in GitHub
