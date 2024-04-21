@@ -12,6 +12,7 @@ struct ActiveStudyView: View {
 
   var state: StudyStatus
   @State var studies: [Study] = []
+  @State private var overText = ""
 
   var body: some View {
     VStack(alignment: .leading) {
@@ -27,9 +28,17 @@ struct ActiveStudyView: View {
         List {
           ForEach(studies, id: \.self) { study in
             Link(study.name.prefix(50), destination: URL(string: study.getAppURL())!)
-              .padding(.bottom, 10.0).fixedSize()
+              .fixedSize()
               .badge(study.total_available_places)
+              .padding(5)
+              .foregroundColor(.white)
+              .background(overText == study.id ? Color.accentColor : Color(.clear))
+              .onHover(perform: { hovering in
+                  overText = study.id
+              })
+              .cornerRadius(5)
           }
+          .listRowSeparator(.hidden)
         }
       }
     }.task {

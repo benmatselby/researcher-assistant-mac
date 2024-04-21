@@ -13,13 +13,11 @@ struct MainView: View {
       // https://developer.apple.com/documentation/swiftui/tabview
       TabView {
         ActiveStudyView(state: StudyStatus.Active)
-          .badge(2)
           .tabItem {
             Label("Active studies", systemImage: "tray.and.arrow.down.fill")
           }
 
         ActiveStudyView(state: StudyStatus.Draft)
-          .badge(2)
           .tabItem {
             Label("Draft studies", systemImage: "tray.and.arrow.down.fill")
           }
