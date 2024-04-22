@@ -13,6 +13,7 @@ struct ActiveStudyView: View {
   var state: StudyStatus
   @State var studies: [Study] = []
   @State private var overText = ""
+  @Environment(\.colorScheme) var colorScheme
 
   var body: some View {
     VStack(alignment: .leading) {
@@ -31,7 +32,7 @@ struct ActiveStudyView: View {
               .fixedSize()
               .badge(study.total_available_places)
               .padding(5)
-              .foregroundColor(.white)
+              .foregroundColor(colorScheme == .dark ? .white : .black)
               .background(overText == study.id ? Color.accentColor : Color(.clear))
               .onHover(perform: { hovering in
                   overText = study.id
