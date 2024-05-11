@@ -13,11 +13,12 @@ struct Study: Codable, Hashable {
   var name: String
   var total_available_places: Int
 
-  /**
-     Get the application URL for the study.
-     */
-  func getAppURL() -> String {
-    return "https://app.prolific.co/researcher/workspaces/studies/" + self.id + "/"
+  /// Get the application URL for the study.
+  ///
+  /// - Returns: The URL for the study
+  func getURL() -> String {
+    let config = ApiConfig()
+    return config.getAppUrl() + "researcher/workspaces/studies/" + self.id + "/"
   }
 }
 

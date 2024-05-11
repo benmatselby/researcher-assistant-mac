@@ -13,6 +13,9 @@ class ApiConfig {
   /// API URL to connect to Prolific.
   var apiURL: String
 
+  /// App URL to load up the Prolific web application.
+  var appURL: String
+
   /// The keychain object we are using to store/retrieve the API Token.
   var keychain: Keychain
 
@@ -21,11 +24,12 @@ class ApiConfig {
 
   /// Constructor
   init() {
-    self.apiURL = "https://api.prolific.co/api"
+    self.apiURL = "https://api.prolific.com/api"
+    self.appURL = "https://app.prolific.com/"
 
     let bundle = Bundle.main.bundleIdentifier!
     self.keychain = Keychain(service: bundle)
-      .label("api.prolific.co")
+      .label("api.prolific.com")
       .synchronizable(true)
   }
 
@@ -48,7 +52,7 @@ class ApiConfig {
 
   /// Retrieve the API Token
   ///
-  /// - Returns: API Token from Keychina
+  /// - Returns: API Token from Keychain
   func getApiToken() -> String {
     return self.keychain[self.keychainKey] ?? ""
   }
@@ -58,5 +62,12 @@ class ApiConfig {
   /// - Returns: An API URL
   func getApiUrl() -> String {
     return self.apiURL
+  }
+
+  /// Get the Application URL
+  ///
+  /// - Returnes: The application URL
+  func getAppUrl() -> String {
+    return self.appURL
   }
 }

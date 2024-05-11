@@ -9,17 +9,21 @@ import XCTest
 @testable import ProlificAssistant
 
 final class ProlificAssistantTests: XCTestCase {
+  override func setUpWithError() throws {
+    // Put setup code here. This method is called before the invocation of each test method in the class.
+  }
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+  override func tearDownWithError() throws {
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
+  }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+  func testGetApiUrlReturnsTheUrl() {
+    let apiConfig = ApiConfig()
+    XCTAssertEqual("https://api.prolific.com/api", apiConfig.getApiUrl())
+  }
 
-    func testGetApiUrlReturnsTheUrl() {
-        let apiConfig = ApiConfig()
-        XCTAssertEqual("https://api.prolific.co/api", apiConfig.getApiUrl())
-    }
+  func testGetAppUrlReturnsTheUrl() {
+    let config = ApiConfig()
+    XCTAssertEqual("https://app.prolific.com/", config.getAppUrl())
+  }
 }
