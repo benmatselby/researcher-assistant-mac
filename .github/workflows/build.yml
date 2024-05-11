@@ -1,0 +1,16 @@
+name: Build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    name: Build
+    steps:
+      - name: Set up Go
+        uses: sersoft-gmbh/xcodebuild-action@v3
+        with:
+          project: ProlificAssistant.xcodeproj
+          scheme: ProlificAssistant
+          destination: platform=macOS
+          action: test
