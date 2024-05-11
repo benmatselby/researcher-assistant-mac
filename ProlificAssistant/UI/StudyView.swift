@@ -16,19 +16,21 @@ struct ActiveStudyView: View {
   @Environment(\.colorScheme) var colorScheme
 
   var body: some View {
+    let config = ApiConfig()
+
     VStack(alignment: .leading) {
 
       if studies.count == 0 {
         VStack(alignment: .center) {
           Spacer()
           Text("No active studies")
-          Link("Create study..", destination: URL(string: "https://app.prolific.co")!)
+          Link("Create study..", destination: URL(string: config.getAppUrl())!)
           Spacer()
         }
       } else {
         List {
           ForEach(studies, id: \.self) { study in
-            Link(study.name.prefix(50), destination: URL(string: study.getAppURL())!)
+            Link(study.name.prefix(50), destination: URL(string: study.getURL())!)
               .fixedSize()
               .badge(study.total_available_places)
               .padding(5)
