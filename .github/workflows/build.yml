@@ -8,7 +8,7 @@ jobs:
     name: Build
     steps:
       - name: what
-        run: ls -la /Users/runner/work/researcher-assistant-mac/
+        run: ls -la /Users/runner/work/researcher-assistant-mac/**
 
       - name: Test
         uses: sersoft-gmbh/xcodebuild-action@v3
