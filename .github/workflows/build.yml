@@ -8,8 +8,9 @@ jobs:
     name: Build
     steps:
       - name: what
-        run: ls -al
-      - name: Set up Go
+        run: ls -la /Users/runner/work/researcher-assistant-mac/
+
+      - name: Test
         uses: sersoft-gmbh/xcodebuild-action@v3
         with:
           project: ProlificAssistant.xcodeproj
