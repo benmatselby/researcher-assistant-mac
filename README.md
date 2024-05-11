@@ -4,7 +4,7 @@ A native mac application, written in Swift, that aims to provide some key inform
 
 ## Requirements
 
-- Xcode 14.2+
+- Xcode 15.3+
 - Swift 5.7+
 
 ## Releasing
@@ -23,9 +23,10 @@ To double check this has produced a Universal Binary, please click on the applic
 
 ## What it looks like
 
-![active-studies](https://github.com/prolific-oss/researcher-assistant-mac/assets/178634/03d0737d-9be1-4217-8244-18ceb22d6453)
+![active-studies-light](https://github.com/benmatselby/researcher-assistant-mac/assets/178634/bbabfdc5-07c1-4b13-873f-c4e9161e4d06)
 
-![draft-studies](https://github.com/prolific-oss/researcher-assistant-mac/assets/178634/58b88207-ff31-40c0-827b-44b1cdddb682)
+![draft-studies-light](https://github.com/benmatselby/researcher-assistant-mac/assets/178634/ff2b5fd8-a949-49d3-b90e-d68d6f3e9bc0)
 
-![settings](https://github.com/prolific-oss/researcher-assistant-mac/assets/178634/9749a43d-095c-414a-a9f7-151dd0727d69)
+![active-studies-dark](https://github.com/benmatselby/researcher-assistant-mac/assets/178634/0fd552c9-229d-4559-bfab-7601450c074f)
 
+![draft-studies-dark](https://github.com/benmatselby/researcher-assistant-mac/assets/178634/af4dbaec-4afc-468c-b8c1-971528e1017c)
