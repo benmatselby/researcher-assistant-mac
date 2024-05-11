@@ -7,6 +7,9 @@ jobs:
     runs-on: macos-latest
     name: Build
     steps:
+      - name: Check out code into the Go module directory
+        uses: actions/checkout@v4
+
       - name: what
         run: ls -la /Users/runner/work/researcher-assistant-mac/researcher-assistant-mac
 
