@@ -33,6 +33,10 @@ struct MainView: View {
         }.keyboardShortcut("q")
       }
     }
-    .frame(width: 400.0).padding(20)
+    .frame(width: 600.0).padding(20)
   }
+}
+
+#Preview {
+  MainView()
 }

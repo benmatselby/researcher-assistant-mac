@@ -24,3 +24,7 @@ struct SettingsView: View {
     }.padding(20)
   }
 }
+
+#Preview {
+  SettingsView()
+}

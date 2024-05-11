@@ -48,6 +48,11 @@ struct ActiveStudyView: View {
       let now = Date()
       print("Loading " + state.description + " studies..." + now.ISO8601Format())
       studies = await Client().getStudies(status: state)
-    }
+    }.frame(minWidth:500, minHeight: 500)
   }
 }
+
+#Preview {
+  ActiveStudyView(state: StudyStatus.Draft)
+}
+
