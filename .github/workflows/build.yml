@@ -7,6 +7,8 @@ jobs:
     runs-on: macos-latest
     name: Build
     steps:
+      - name: what
+        run: ls -al
       - name: Set up Go
         uses: sersoft-gmbh/xcodebuild-action@v3
         with:
